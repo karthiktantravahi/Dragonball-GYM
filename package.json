@@ -1,0 +1,30 @@
+{
+  "name": "dragonball-gym",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DRAGONBALL GYM - High-End Athletic Fitness Platform",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"red,cyan\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "start": "concurrently -n \"SERVER,CLIENT\" -c \"red,cyan\" \"npm --prefix server run start\" \"npm --prefix client run preview\"",
+    "seed": "npm --prefix server run seed"
+  },
+  "keywords": [
+    "gym",
+    "fitness",
+    "react",
+    "vite",
+    "tailwind",
+    "express",
+    "mongodb",
+    "jwt",
+    "dragonball"
+  ],
+  "author": "Dragonball Gym Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
